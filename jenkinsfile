@@ -1,15 +1,15 @@
 pipeline{
-        agent any
-        stages{
-            stage("checkout code"){
-                steps{
-                    sh "git clone https://github.com/kalashnirmale/JavaProject.git"
-                }
-            }
-            stage("Check the docker version"){
-                steps{
-                    sh "sudo docker version"
-                }
+    agent any
+    stages{
+        stage("checkout code") {
+            steps{
+                sh "git clone https://github.com/kalashnirmale/JavaProject.git"
             }
         }
+        stage("check docker version") {
+            steps{
+                sh "sudo docker version"
+            }
+        }
+    }
 }
